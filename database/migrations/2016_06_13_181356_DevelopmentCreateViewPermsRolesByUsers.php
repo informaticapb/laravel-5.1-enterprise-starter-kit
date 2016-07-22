@@ -12,7 +12,7 @@ class DevelopmentCreateViewPermsRolesByUsers extends Migration
      */
     public function up()
     {
-        if (App::environment('development')) {
+        if (App::environment('development1')) {
 
             // Build view for the report, for the development environment,
             // as a demo.
@@ -60,7 +60,7 @@ class DevelopmentCreateViewPermsRolesByUsers extends Migration
      */
     public function down()
     {
-        if (App::environment('development')) {
+        if (App::environment('development1')) {
 
             DB::statement("DROP VIEW IF EXISTS v_permissions_and_roles_by_users");
         }
