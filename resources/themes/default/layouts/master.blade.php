@@ -11,6 +11,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- Set a meta reference to the CSRF token for use in AJAX request -->
     <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <!-- Google fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Bitter" rel="stylesheet" type="text/css" />
     <!-- Bootstrap 3.3.4 -->
     <link href="{{ asset("/bower_components/admin-lte/bootstrap/css/bootstrap.min.css") }}" rel="stylesheet" type="text/css" />
     <!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">-->
@@ -29,12 +31,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     @include('partials._head')
 
     <!-- Rapid Styles CSS-->
-    <link media="all" type="text/css" rel="stylesheet" href="{{ asset("/packages/zofe/rapyd/assets/autocomplete/autocomplete.css") }}" />
-    <link media="all" type="text/css" rel="stylesheet" href="{{ asset("/packages/zofe/rapyd/assets/autocomplete/bootstrap-tagsinput.css") }}" />
-    <link media="all" type="text/css" rel="stylesheet" href="{{ asset("/packages/zofe/rapyd/assets/datepicker/datepicker3.css") }} "/>
-    <link media="all" type="text/css" rel="stylesheet" href="{{ asset("/packages/zofe/rapyd/assets/demo/style.css") }}" />
-    <link media="all" type="text/css" rel="stylesheet" href="{{ asset("/packages/zofe/rapyd/assets/rapyd.css") }}" />
-
+    {!! Rapyd::styles() !!}
+    
     <style>
       .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td
       {
@@ -73,17 +71,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <!-- Optional header section  -->
       @yield('head_extra')
 
-    <!-- Rapid Javascript-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.pjax/1.9.6/jquery.pjax.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/2.2.4/riot+compiler.min.js" type="text/javascript"></script>
-    <script src="{{ asset("/packages/zofe/rapyd/assets/autocomplete/typeahead.bundle.min.js") }}" type="text/javascript"></script>
-    <script src="{{ asset("/packages/zofe/rapyd/assets/template/handlebars.js") }}" type="text/javascript"></script>
-    <script src="{{ asset("/packages/zofe/rapyd/assets/autocomplete/bootstrap-tagsinput.min.js") }}" type="text/javascript"></script>
-    <script src="{{ asset("/packages/zofe/rapyd/assets/datepicker/bootstrap-datepicker.js") }}" type="text/javascript"></script>
-
   </head>
 
   <!-- Body -->
   @include('partials._body')
-
+{!! Rapyd::scripts() !!}
 </html>

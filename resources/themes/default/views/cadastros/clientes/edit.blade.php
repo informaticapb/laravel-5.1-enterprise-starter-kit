@@ -1,7 +1,7 @@
 @extends('layouts.master')
-
+{!! Rapyd::head() !!} 
 @section('content')
-        {!! $edit; !!}
+        {!! $edit !!}
 @endsection
 
 

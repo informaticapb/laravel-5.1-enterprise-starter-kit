@@ -125,7 +125,7 @@ class ClientesController extends Controller
         } else if (isset($attributes['do_delete'])) {
             Flash::success("Cliente Deletado");
         }
-        $edit->link("cadastros/clientes","Voltar", "TR")->back('do_delete|update');
+//        $edit->link("cadastros/clientes","Voltar", "TR")->back();
         $edit->add('nome', 'Nome', 'text')->rule('required|max:100|unique:clientes,nome,'.$attributes['id']);
         $edit->add('insc_estadual', 'Inscrição Estadual', 'text')->rule('max:40');
         $edit->add('tel1', 'Telefone 1', 'text')->rule('max:20');
