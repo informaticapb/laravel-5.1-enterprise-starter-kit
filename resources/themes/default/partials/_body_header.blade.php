@@ -35,27 +35,27 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li class="header">You have 4 messages</li>
-                                <li>
+<!--                                <li>-->
                                     <!-- inner menu: contains the messages -->
-                                    <ul class="menu">
-                                        <li><!-- start message -->
-                                            <a href="#">
-                                                <div class="pull-left">
+<!--                                    <ul class="menu">-->
+<!--                                        <li>--><!-- start message -->
+<!--                                            <a href="#">
+                                                <div class="pull-left">-->
                                                     <!-- User Image -->
-                                                    <img src="{{ asset("/bower_components/admin-lte/dist/img/generic_user_160x160.jpg") }}" class="img-circle" alt="User Image"/>
-                                                </div>
+<!--                                                    <img src="{{ asset("/bower_components/admin-lte/dist/img/generic_user_160x160.jpg") }}" class="img-circle" alt="User Image"/>
+                                                </div>-->
                                                 <!-- Message title and timestamp -->
-                                                <h4>
+<!--                                                <h4>
                                                     Support Team
                                                     <small><i class="fa fa-clock-o"></i> 5 mins</small>
-                                                </h4>
+                                                </h4>-->
                                                 <!-- The message -->
-                                                <p>Why not buy a new awesome theme?</p>
+<!--                                                <p>Why not buy a new awesome theme?</p>
                                             </a>
-                                        </li><!-- end message -->
-                                    </ul><!-- /.menu -->
-                                </li>
-                                <li class="footer"><a href="#">See All Messages</a></li>
+                                        </li>--><!-- end message -->
+<!--                                    </ul>--><!-- /.menu -->
+<!--                                </li>
+                                <li class="footer"><a href="#">See All Messages</a></li>-->
                             </ul>
                         </li><!-- /.messages-menu -->
                         <!-- Notifications Menu -->
@@ -66,18 +66,18 @@
                                 <span class="label label-warning">10</span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li class="header">You have 10 notifications</li>
+                                <li class="header">Voce tem 10 notificações</li>
                                 <li>
                                     <!-- Inner Menu: contains the notifications -->
                                     <ul class="menu">
                                         <li><!-- start notification -->
                                             <a href="#">
-                                                <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                                                <i class="fa fa-users text-aqua"></i> 5 novos membros aderiram hoje
                                             </a>
                                         </li><!-- end notification -->
                                     </ul>
                                 </li>
-                                <li class="footer"><a href="#">View all</a></li>
+                                <li class="footer"><a href="#">Ver todas as Notificações</a></li>
                             </ul>
                         </li>
                         <!-- Tasks Menu -->
@@ -88,7 +88,7 @@
                                 <span class="label label-danger">9</span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li class="header">You have 9 tasks</li>
+                                <li class="header">Voce tem 9 tarefas</li>
                                 <li>
                                     <!-- Inner menu: contains the tasks -->
                                     <ul class="menu">
@@ -103,7 +103,7 @@
                                                 <div class="progress xs">
                                                     <!-- Change the css width attribute to simulate progress -->
                                                     <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                        <span class="sr-only">20% Complete</span>
+                                                        <span class="sr-only">20% Completo</span>
                                                     </div>
                                                 </div>
                                             </a>
@@ -111,7 +111,7 @@
                                     </ul>
                                 </li>
                                 <li class="footer">
-                                    <a href="#">View all tasks</a>
+                                    <a href="#">Ver todas as tarefas</a>
                                 </li>
                             </ul>
                         </li>
@@ -136,7 +136,7 @@
                                 </p>
                             </li>
 
-                            @if ( config('app.extended_user_menu') )
+                            @if ( config('app.extended_user_menu1') )
                                 <!-- Menu Body -->
                                 <li class="user-body">
                                     <div class="col-xs-4 text-center">
@@ -156,12 +156,12 @@
 
                                 @if ( config('app.user_profile_link') )
                                     <div class="pull-left">
-                                        {!! link_to_route('user.profile', 'Profile', [], ['class' => "btn btn-default btn-flat"]) !!}
+                                        {!! link_to_route('user.profile', 'Perfil', [], ['class' => "btn btn-default btn-flat"]) !!}
                                     </div>
                                 @endif
 
                                 <div class="pull-right">
-                                    {!! link_to_route('logout', 'Sign out', [], ['class' => "btn btn-default btn-flat"]) !!}
+                                    {!! link_to_route('logout', 'Sair', [], ['class' => "btn btn-default btn-flat"]) !!}
                                 </div>
                             </li>
                         </ul>
@@ -174,9 +174,9 @@
                         </li>
                     @endif
                 @else
-                    <li>{!! link_to_route('login', 'Sign in') !!}</li>
+                    <li>{!! link_to_route('login', 'Entrar') !!}</li>
                     @if (config('app.allow_registration'))
-                        <li>{!! link_to_route('register', 'Register') !!}</li>
+                        <li>{!! link_to_route('register', 'Registar') !!}</li>
                     @endif
                 @endif
             </ul>

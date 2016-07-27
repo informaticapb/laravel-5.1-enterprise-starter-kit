@@ -30,99 +30,110 @@ class ProductionSeeder extends Seeder
         // Create basic set of permissions
         $permGuestOnly = Permission::create([
             'name'          => 'guest-only',
-            'display_name'  => 'Guest only access',
-            'description'   => 'Only guest users can access these.',
+            'display_name'  => 'Acesso só para convidados',
+            'description'   => 'Só os usuários (convidados) podem acessar este conteúdo.',
             'enabled'       => true,
         ]);
         $permOpenToAll = Permission::create([
             'name'          => 'open-to-all',
-            'display_name'  => 'Open to all',
-            'description'   => 'Everyone can access these, even unauthenticated (guest) users.',
+            'display_name'  => 'Aberto para todos',
+            'description'   => 'Todos os usuários podem acessar este conteúdo, até os usuários não registrados (convidados).',
             'enabled'       => true,
         ]);
         $permBasicAuthenticated = Permission::create([
             'name'          => 'basic-authenticated',
-            'display_name'  => 'Basic authenticated',
-            'description'   => 'Basic permission after being authenticated.',
+            'display_name'  => 'Authenticação Basica',
+            'description'   => 'Permissões basicas após a autenticação.',
             'enabled'       => true,
         ]);
         // Create a few permissions for the admin|security section
         $permManageMenus = Permission::create([
             'name'          => 'manage-menus',
-            'display_name'  => 'Manage menus',
-            'description'   => 'Allows a user to manage the site menus.',
+            'display_name'  => 'Gerenciar menus',
+            'description'   => 'Permite que o usuário altere as configurações dos menus.',
             'enabled'       => true,
         ]);
         $permManageUsers = Permission::create([
             'name'          => 'manage-users',
-            'display_name'  => 'Manage users',
-            'description'   => 'Allows a user to manage the site users.',
+            'display_name'  => 'Gerenciar usuários',
+            'description'   => 'Permite que o usuário altere as configurações dos usuários.',
             'enabled'       => true,
         ]);
         $permManageRoles = Permission::create([
             'name'          => 'manage-roles',
-            'display_name'  => 'Manage roles',
-            'description'   => 'Allows a user to manage the site roles.',
+            'display_name'  => 'Gerenciar funções',
+            'description'   => 'Permite que o usuário altere as configurações das funções.',
             'enabled'       => true,
         ]);
         $permManagePermissions = Permission::create([
             'name'          => 'manage-permissions',
-            'display_name'  => 'Manage permissions',
-            'description'   => 'Allows a user to manage the site permissions.',
+            'display_name'  => 'Gerenciar permissões',
+            'description'   => 'Permite que o usuário altere as configurações das permissões.',
             'enabled'       => true,
         ]);
         $permManageRoutes = Permission::create([
             'name'          => 'manage-routes',
-            'display_name'  => 'Manage routes',
-            'description'   => 'Allows a user to manage the site routes.',
+            'display_name'  => 'Gerenciar rotas',
+            'description'   => 'Permite que o usuário altere as configurações das rotas.',
             'enabled'       => true,
         ]);
         $permManageModules = Permission::create([
             'name'          => 'manage-modules',
-            'display_name'  => 'Manage modules',
-            'description'   => 'Allows a user to manage the site modules.',
+            'display_name'  => 'Gerenciar módulos',
+            'description'   => 'Permite que o usuário altere as configurações dos módulos.',
             'enabled'       => true,
         ]);
         // Create a few permissions for the admin|audit section
         $permAuditLogView = Permission::create([
             'name'          => 'audit-log-view',
-            'display_name'  => 'View audit log',
-            'description'   => 'Allows a user to view the audit log.',
+            'display_name'  => 'Visualizar registo de auditoria',
+            'description'   => 'Permite que o usuário visualise os registo de auditoria.',
             'enabled'       => true,
         ]);
         $permAuditReplay = Permission::create([
             'name'          => 'audit-log-replay',
-            'display_name'  => 'Replay audit log item',
-            'description'   => 'Allows a user to replay items from the audit log.',
+            'display_name'  => 'Reproduzir itens do registo de auditoria',
+            'description'   => 'Permite que o usuário reproduza itens dos registo de auditoria.',
             'enabled'       => true,
         ]);
         $permAuditPurge = Permission::create([
             'name'          => 'audit-log-purge',
-            'display_name'  => 'Purge audit log',
-            'description'   => 'Allows a user to purge old items from the audit log.',
+            'display_name'  => 'Limpar o registo de auditoria',
+            'description'   => 'Permite que o usuário limpe itens antigos do registo de auditoria.',
             'enabled'       => true,
         ]);
         // Create permission to manage the site settings
         $permAdminSettings = Permission::create([
             'name'          => 'admin-settings',
-            'display_name'  => 'Administer site settings',
-            'description'   => 'Allows a user to change site settings.',
+            'display_name'  => 'Administrar configurações do site',
+            'description'   => 'Permite que o usuário altere as configurações do site.',
             'enabled'       => true,
         ]);
         // Create a few permissions for the admin|errors section
         $permErrorLogView = Permission::create([
             'name'          => 'error-log-view',
-            'display_name'  => 'View error log',
-            'description'   => 'Allows a user to view the error log.',
+            'display_name'  => 'Visualizar registo de erros',
+            'description'   => 'Permite que o usuário visualize o registo de erros.',
             'enabled'       => true,
         ]);
         $permErrorPurge = Permission::create([
             'name'          => 'error-log-purge',
-            'display_name'  => 'Purge error log',
-            'description'   => 'Allows a user to purge old items from the error log.',
+            'display_name'  => 'Limpar o registo de erros',
+            'description'   => 'Permite que o usuário limpe itens antigos do registo de erro.',
             'enabled'       => true,
         ]);
-
+        $permManageCadastros = Permission::create([
+            'name'          => 'manage-cadastros',
+            'display_name'  => 'Gerenciar Cadastros',
+            'description'   => 'Permite que o usuário gerencie os cadastros do site.',
+            'enabled'       => true,
+        ]);
+        $permManageClientes = Permission::create([
+            'name'          => 'manage-clientes',
+            'display_name'  => 'Gerenciar clientes',
+            'description'   => 'Permite que o usuário gerencie os clientes do site.',
+            'enabled'       => true,
+        ]);
 
         ////////////////////////////////////
         // Associate open-to-all permission to some routes
@@ -203,6 +214,20 @@ class ProductionSeeder extends Seeder
             $route->permission()->associate($permManageUsers);
             $route->save();
         }
+        // Associate manage-cadastros permissions to routes starting with 'cadastros.'
+        $manageCadastrosRoutes = Route::where('name', 'like', "cadastros.%")->get()->all();
+        foreach ($manageCadastrosRoutes as $route)
+        {
+            $route->permission()->associate($permManageCadastros);
+            $route->save();
+        }
+        // Associate manage-cientes permissions to routes starting with 'cadastros.clientes.'
+        $manageClientesRoutes = Route::where('name', 'like', "cadastros.clientes.%")->get()->all();
+        foreach ($manageClientesRoutes as $route)
+        {
+            $route->permission()->associate($permManageClientes);
+            $route->save();
+        }
         // Associate the admin-settings permissions
         $routeAdminSettings = Route::where('name', 'admin.settings.index')->get()->first();
         $routeAdminSettings->permission()->associate($permAdminSettings);
@@ -223,16 +248,16 @@ class ProductionSeeder extends Seeder
         // Create role: admins
         $roleAdmins = Role::create([
             "name"          => "admins",
-            "display_name"  => "Administrators",
-            "description"   => "Administrators have no restrictions",
+            "display_name"  => "Administratores",
+            "description"   => "Administratores não têm restrição",
             "enabled"       => true
         ]);
         // Create role: users
         // Assign permission basic-authenticated
         $roleUsers = Role::create([
             "name"          => "users",
-            "display_name"  => "Users",
-            "description"   => "All authenticated users",
+            "display_name"  => "Usuários",
+            "description"   => "Todos os usuários autenticados.",
             "enabled"       => true
         ]);
         $roleUsers->perms()->attach($permBasicAuthenticated->id);
@@ -240,8 +265,8 @@ class ProductionSeeder extends Seeder
         // Assign permission manage-menus
         $roleMenuManagers = Role::create([
             "name"          => "menu-managers",
-            "display_name"  => "Menu managers",
-            "description"   => "Menu managers are granted all permissions to the Admin|Menus section.",
+            "display_name"  => "Gestores de menu",
+            "description"   => "Aos Gestores de menu são concedidas todas as permissões para as seções Adminstradores|Menus.",
             "enabled"       => true
         ]);
         $roleMenuManagers->perms()->attach($permManageMenus->id);
@@ -249,8 +274,8 @@ class ProductionSeeder extends Seeder
         // Assign permission manage-users
         $roleUserManagers = Role::create([
             "name"          => "user-managers",
-            "display_name"  => "User managers",
-            "description"   => "User managers are granted all permissions to the Admin|Users section.",
+            "display_name"  => "Gestores de usuários",
+            "description"   => "Aos Gestores de usuários são concedidas todas as permissões para as seções Administradores|Usuários.",
             "enabled"       => true
         ]);
         $roleUserManagers->perms()->attach($permManageUsers->id);
@@ -258,8 +283,8 @@ class ProductionSeeder extends Seeder
         // Assign permission manage-modules
         $roleModuleManagers = Role::create([
             "name"          => "module-managers",
-            "display_name"  => "Module managers",
-            "description"   => "Module managers are granted all permissions to the Admin|Modules section.",
+            "display_name"  => "Gestores de módulos",
+            "description"   => "Aos Gestores de módulos são concedidas todas as permissões para as secções administradores|Módulos.",
             "enabled"       => true
         ]);
         $roleModuleManagers->perms()->attach($permManageModules->id);
@@ -267,8 +292,8 @@ class ProductionSeeder extends Seeder
         // Assign permission: manage-roles
         $roleRoleManagers = Role::create([
             "name"          => "role-managers",
-            "display_name"  => "Role managers",
-            "description"   => "Role managers are granted all permissions to the Admin|Roles section.",
+            "display_name"  => "Gestores de funções",
+            "description"   => "Aos Gestores de funções são concedidas todas as permissões para as seções administradores|Funções.",
             "enabled"       => true
         ]);
         $roleRoleManagers->perms()->attach($permManageRoles->id);
@@ -276,8 +301,8 @@ class ProductionSeeder extends Seeder
         // Assign permission: audit-log-view
         $roleAuditViewers = Role::create([
             "name"          => "audit-viewers",
-            "display_name"  => "Audit viewers",
-            "description"   => "Users allowed to view the audit log.",
+            "display_name"  => "Visualizadores de auditoria",
+            "description"   => "Os usuários podem visualizar o registo de auditoria.",
             "enabled"       => true
         ]);
         $roleAuditViewers->perms()->attach($permAuditLogView->id);
@@ -285,8 +310,8 @@ class ProductionSeeder extends Seeder
         // Assign permission: audit-log-replay
         $roleAuditReplayers = Role::create([
             "name"          => "audit-replayers",
-            "display_name"  => "Audit replayers",
-            "description"   => "Users allowed to replay items from the audit log.",
+            "display_name"  => "Reproduzir auditoria",
+            "description"   => "Os usuários estão autorizados a reproduzir os itens do registo de auditoria.",
             "enabled"       => true
         ]);
         $roleAuditReplayers->perms()->attach($permAuditReplay->id);
@@ -294,8 +319,8 @@ class ProductionSeeder extends Seeder
         // Assign permission: audit-log-purge
         $roleAuditPurgers = Role::create([
             "name"          => "audit-purgers",
-            "display_name"  => "Audit purgers",
-            "description"   => "Users allowed to purge old items from the audit log.",
+            "display_name"  => "Limpar auditoria",
+            "description"   => "Os usuários estão autorizados a limpar itens antigos do registo de auditoria.",
             "enabled"       => true
         ]);
         $roleAuditPurgers->perms()->attach($permAuditPurge->id);
@@ -303,8 +328,8 @@ class ProductionSeeder extends Seeder
         // Assign permission: error-log-view
         $roleErrorViewers = Role::create([
             "name"          => "error-viewers",
-            "display_name"  => "Error viewers",
-            "description"   => "Users allowed to view the error log.",
+            "display_name"  => "Visualizadores de erros",
+            "description"   => "Os usuários podem visualizar o registo de erros.",
             "enabled"       => true
         ]);
         $roleErrorViewers->perms()->attach($permErrorLogView->id);
@@ -312,12 +337,29 @@ class ProductionSeeder extends Seeder
         // Assign permission: error-log-purge
         $roleErrorPurgers = Role::create([
             "name"          => "error-purgers",
-            "display_name"  => "Error purgers",
-            "description"   => "Users allowed to purge old items from the error log.",
+            "display_name"  => "Limpadores de erros",
+            "description"   => "Os usuários estão autorizados a limpar itens antigos do registo de erros.",
             "enabled"       => true
         ]);
         $roleErrorPurgers->perms()->attach($permErrorPurge->id);
-
+        // Create role: cadastros-manager
+        // Assign permission manage-cadastros
+        $roleCadastrosManagers = Role::create([
+            "name"          => "cadastros-managers",
+            "display_name"  => "Gestores de cadastros",
+            "description"   => "Aos Gestores de cadastros são concedidas todas as permissões para as seções de Cadastros.",
+            "enabled"       => true
+        ]);
+        $roleCadastrosManagers->perms()->attach($permManageCadastros->id);
+        // Create role: cliente-manager
+        // Assign permission manage-clientes
+        $roleClientesManagers = Role::create([
+            "name"          => "clientes-managers",
+            "display_name"  => "Gestores de clientes",
+            "description"   => "Aos Gestores de clientes são concedidas todas as permissões para as seções de Cadastros|Clientes.",
+            "enabled"       => true
+        ]);
+        $roleClientesManagers->perms()->attach($permManageClientes->id);
 
         ////////////////////////////////////
         // Create user: root
@@ -356,7 +398,7 @@ class ProductionSeeder extends Seeder
         // Create Home menu
         $menuHome = Menu::create([
             'name'          => 'home',
-            'label'         => 'Home',
+            'label'         => 'Casa',
             'position'      => 0,
             'icon'          => 'fa fa-home fa-colour-green',
             'separator'     => false,
@@ -369,7 +411,7 @@ class ProductionSeeder extends Seeder
         // Create Dashboard menu
         $menuDashboard = Menu::create([
             'name'          => 'dashboard',
-            'label'         => 'Dashboard',
+            'label'         => 'Notícias',
             'position'      => 0,
             'icon'          => 'fa fa-dashboard',
             'separator'     => false,
@@ -382,7 +424,7 @@ class ProductionSeeder extends Seeder
         // Create Admin container.
         $menuAdmin = Menu::create([
             'name'          => 'admin',
-            'label'         => 'Admin',
+            'label'         => 'Administração',
             'position'      => 999,                 // Artificially high number to ensure that it is rendered last.
             'icon'          => 'fa fa-cog',
             'separator'     => false,
@@ -397,7 +439,7 @@ class ProductionSeeder extends Seeder
         // Create Audit sub-menu
         $menuAudit = Menu::create([
             'name'          => 'audit',
-            'label'         => 'Audit',
+            'label'         => 'Auditoria',
             'position'      => 0,
             'icon'          => 'fa fa-binoculars',
             'separator'     => false,
@@ -410,7 +452,7 @@ class ProductionSeeder extends Seeder
         // Create Error sub-menu
         $menuError = Menu::create([
             'name'          => 'error',
-            'label'         => 'Error',
+            'label'         => 'Erros',
             'position'      => 1,
             'icon'          => 'fa fa-binoculars',
             'separator'     => false,
@@ -423,7 +465,7 @@ class ProductionSeeder extends Seeder
         // Create Modules sub-menu
         $menuModules = Menu::create([
             'name'          => 'modules',
-            'label'         => 'Modules',
+            'label'         => 'Módulos',
             'position'      => 2,
             'icon'          => 'fa fa-puzzle-piece',
             'separator'     => false,
@@ -436,7 +478,7 @@ class ProductionSeeder extends Seeder
         // Create Security container.
         $menuSecurity = Menu::create([
             'name'          => 'security',
-            'label'         => 'Security',
+            'label'         => 'Segurança',
             'position'      => 3,
             'icon'          => 'fa fa-user-secret fa-colour-red',
             'separator'     => false,
@@ -459,7 +501,7 @@ class ProductionSeeder extends Seeder
             'route_id'      => Route::where('name', 'like', "admin.menus.index")->get()->first()->id,
             'permission_id' => null,                // Get permission from route.
         ]);
-        // Create separator
+/*        // Create separator
         $menuUsers = Menu::create([
             'name'          => 'menus-users-separator',
             'label'         => '-----',
@@ -472,10 +514,10 @@ class ProductionSeeder extends Seeder
             'route_id'      => null,
             'permission_id' => null,                // Get permission from route.
         ]);
-        // Create Users sub-menu
+*/        // Create Users sub-menu
         $menuUsers = Menu::create([
             'name'          => 'users',
-            'label'         => 'Users',
+            'label'         => 'Usuários',
             'position'      => 2,
             'icon'          => 'fa fa-user',
             'separator'     => false,
@@ -488,7 +530,7 @@ class ProductionSeeder extends Seeder
         // Create Roles sub-menu
         $menuRoles = Menu::create([
             'name'          => 'roles',
-            'label'         => 'Roles',
+            'label'         => 'Funções',
             'position'      => 3,
             'icon'          => 'fa fa-users',
             'separator'     => false,
@@ -501,7 +543,7 @@ class ProductionSeeder extends Seeder
         // Create Permissions sub-menu
         $menuPermissions = Menu::create([
             'name'          => 'permissions',
-            'label'         => 'Permissions',
+            'label'         => 'Permissões',
             'position'      => 4,
             'icon'          => 'fa fa-bolt',
             'separator'     => false,
@@ -514,7 +556,7 @@ class ProductionSeeder extends Seeder
         // Create Routes sub-menu
         $menuRoutes = Menu::create([
             'name'          => 'routes',
-            'label'         => 'Routes',
+            'label'         => 'Rotas',
             'position'      => 5,
             'icon'          => 'fa fa-road',
             'separator'     => false,
@@ -524,7 +566,7 @@ class ProductionSeeder extends Seeder
             'route_id'      => Route::where('name', 'like', "admin.routes.index")->get()->first()->id,
             'permission_id' => null,                // Get permission from route.
         ]);
-        // Create Settings sub-menu
+/*        // Create Settings sub-menu
         $menuSettings = Menu::create([
             'name'          => 'setting',
             'label'         => 'Settings',
@@ -536,6 +578,36 @@ class ProductionSeeder extends Seeder
             'parent_id'     => $menuAdmin->id,      // Parent is admin.
             'route_id'      => $routeAdminSettings->id,
             'permission_id' => null,                // Get permission from route.
+        ]);
+  */      // Create Cadastros container.
+        $menuCadastros = Menu::create([
+            'name'          => 'cadastros',
+            'label'         => 'Cadastros',
+            'position'      => 998,                 // Artificially high number to ensure that it is rendered last.
+            'icon'          => 'fa fa-keyboard-o',
+            'separator'     => false,
+            'url'           => null,                // No url.
+            'enabled'       => true,
+            'parent_id'     => $menuRoot->id,       // Parent is root.
+            'route_id'      => Route::where('name', 'like', "cadastros.%")->get()->first()->id,                // No route
+            'permission_id' => null,                // Get permission from sub-items. If the user has permission to see/use
+                                                   // any sub-items, the admin menu will be rendered, otherwise it will
+                                                    // not.
+        ]);
+        // Create Clientes container.
+        $menuCadastro = Menu::create([
+            'name'          => 'clientes',
+            'label'         => 'Clientes',
+            'position'      => 1,                 // Artificially high number to ensure that it is rendered last.
+            'icon'          => 'fa fa-user',
+            'separator'     => false,
+            'url'           => null,                // No url.
+            'enabled'       => true,
+            'parent_id'     => $menuCadastros->id,       // Parent is root.
+            'route_id'      => Route::where('name', 'like', "cadastros.clientes.%")->get()->first()->id,
+            'permission_id' => null,                // Get permission from sub-items. If the user has permission to see/use
+                                                   // any sub-items, the admin menu will be rendered, otherwise it will
+                                                    // not.
         ]);
 
     }

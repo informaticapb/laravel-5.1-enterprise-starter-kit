@@ -1,7 +1,7 @@
 @extends('layouts.dialog')
 
 @section('content')
-    <p class="login-box-msg">Sign in to start your session</p>
+    <p class="login-box-msg">Entre para começar a sua sessão</p>
         <form class="form-signin" method="POST" action="/auth/login" >
             {!! csrf_field() !!}
 
@@ -17,17 +17,17 @@
                 <div class="col-xs-8">
                     <div class="checkbox icheck">
                         <label>
-                            <input type="checkbox" id="remember" name="remember"> Remember Me
+                            <input type="checkbox" id="remember" name="remember"> Lembre de mim
                         </label>
                     </div>
                 </div><!-- /.col -->
                 <div class="col-xs-4">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">Entrar</button>
                 </div><!-- /.col -->
             </div>
         </form>
 
-        {!! link_to_route('recover_password', 'I forgot my password', [], ['class' => "text-center"]) !!}<br>
+        {!! link_to_route('recover_password', 'Eu esqueci a minha senha', [], ['class' => "text-center"]) !!}<br>
         @if (config('app.allow_registration'))
             {!! link_to_route('register', 'Register a new membership', [], ['class' => "text-center"]) !!}
         @endif

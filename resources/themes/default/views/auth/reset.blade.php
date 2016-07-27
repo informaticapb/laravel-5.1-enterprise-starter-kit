@@ -1,7 +1,7 @@
 @extends('layouts.dialog')
 
 @section('content')
-    <p class="login-box-msg">Enter your email address and new password</p>
+    <p class="login-box-msg">Digite seu endereço de e-mail e a senha nova</p>
 
 
     <form method="POST" action="/password/reset">
@@ -30,7 +30,7 @@
 
     </form>
 
-    {!! link_to_route('login', 'Sign in', [], ['class' => "text-center"]) !!}<br>
+    {!! link_to_route('login', 'Entrar', [], ['class' => "text-center"]) !!}<br>
     {!! link_to_route('register', 'Register a new membership', [], ['class' => "text-center"]) !!}
 
 @endsection

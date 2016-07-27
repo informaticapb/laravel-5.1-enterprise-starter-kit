@@ -35,13 +35,12 @@ return [
     'digits'               => 'O campo :attribute deverá conter :digits dígitos.',
     'digits_between'       => 'O campo :attribute deverá conter entre :min a :max dígitos.',
     'email'                => 'O campo :attribute não contém um endereço de email válido.',
-    'exists'               => 'O valor selecionado para o campo :attribute é inválido.',
     'filled'               => 'O campo :attribute é obrigatório.',
+    'exists'               => 'O valor selecionado para o campo :attribute é inválido.',
     'image'                => 'O campo :attribute deverá conter uma imagem.',
     'in'                   => 'O campo :attribute não contém um valor válido.',
     'integer'              => 'O campo :attribute deverá conter um número inteiro.',
     'ip'                   => 'O campo :attribute deverá conter um IP válido.',
-    'json'                 => 'O campo :attribute deverá conter uma string JSON válida.',
     'max'                  => [
         'numeric' => 'O campo :attribute não deverá conter um valor superior a :max.',
         'file'    => 'O campo :attribute não deverá ter um tamanho superior a :max kilobytes.',
@@ -64,7 +63,6 @@ return [
     'required_with'        => 'O campo :attribute é obrigatório quando :values está presente.',
     'required_with_all'    => 'O campo :attribute é obrigatório quando um dos :values está presente.',
     'required_without'     => 'O campo :attribute é obrigatório quanto :values não está presente.',
-    'required_without_all' => 'O campo :attribute é obrigatório quando nenhum dos :values está presente.',
     'same'                 => 'Os campos :attribute e :other deverão conter valores iguais.',
     'size'                 => [
         'numeric' => 'O campo :attribute deverá conter o valor :size.',
@@ -72,7 +70,6 @@ return [
         'string'  => 'O campo :attribute deverá conter :size caracteres.',
         'array'   => 'O campo :attribute deve ter :size itens.',
     ],
-    'string'               => 'O campo :attribute deve ser uma string.',
     'timezone'             => 'O campo :attribute deverá ter um fuso horário válido.',
     'unique'               => 'O valor indicado para o campo :attribute já se encontra utilizado.',
     'url'                  => 'O formato do URL indicado para o campo :attribute é inválido.',
@@ -88,7 +85,7 @@ return [
     |
     */
 
-    'custom'               => [
+    'custom' => [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
@@ -105,8 +102,6 @@ return [
     |
     */
 
-    'attributes'           => [
-        //
-    ],
+    'attributes' => [],
 
 ];

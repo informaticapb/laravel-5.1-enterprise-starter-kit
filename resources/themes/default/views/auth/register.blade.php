@@ -43,6 +43,6 @@
             </div>
         </form>
 
-        {!! link_to_route('login', 'Sign in', [], ['class' => "text-center"]) !!}<br>
+        {!! link_to_route('login', 'Entrar', [], ['class' => "text-center"]) !!}<br>
         {!! link_to_route('recover_password', 'I forgot my password', [], ['class' => "text-center"]) !!}
 @endsection

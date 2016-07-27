@@ -36,6 +36,7 @@ Route::get( 'welcome', ['as' => 'welcome',     'uses' => 'HomeController@welcome
 Route::group(['middleware' => 'authorize'], function () {
     // Application routes...
     Route::get(   'dashboard',      ['as' => 'dashboard',          'uses' => 'DashboardController@index']);
+//    Route::get(   'dashboard',      ['as' => 'dashboard',          'uses' => 'HomeController@welcome']);
     Route::get(   'user/profile',   ['as' => 'user.profile',       'uses' => 'UsersController@profile']);
     Route::patch( 'user/profile',   ['as' => 'user.profile.patch', 'uses' => 'UsersController@profileUpdate']);
 
@@ -142,8 +143,15 @@ Route::group(['middleware' => 'authorize'], function () {
 
     }); // End of ADMIN group
 
+    // Site Cadastro section
+    Route::group(['prefix' => 'cadastros'], function () {
+        // User routes
+        Route::any(  'clientes',                                                ['as' => 'cadastros.clientes.index',   'uses' => 'ClientesController@index']);
+        Route::any(  'clientes/edit/{one?}/{two?}/{three?}/{four?}/{five?}',    ['as' => 'cadastros.clientes.edit',    'uses' => 'ClientesController@edit']);
+    }); // End of Cadastro group
+
     // TODO: Remove this before release...
-    if ($this->app->environment('development')) {
+    if ($this->app->environment('development1')) {
         // TEST-ACL routes
         Route::group(['prefix' => 'test-acl'], function () {
             Route::get('home',                  ['as' => 'test-acl.home',                'uses' => 'TestController@test_acl_home']);

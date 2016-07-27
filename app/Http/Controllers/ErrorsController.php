@@ -62,16 +62,16 @@ class ErrorsController extends Controller {
 
     public function show($id)
     {
+        $replayAtt["id"] = $id;
         $error = $this->error->find($id);
-
-        Audit::log(Auth::user()->id, trans('admin/error/general.audit-log.category'), trans('admin/error/general.audit-log.msg-show'));
+        Audit::log(Auth::user()->id, trans('admin/error/general.audit-log.category'), trans('admin/error/general.audit-log.msg-show'), $replayAtt, 'App\Http\Controllers\AuditsController::show', "admin.errors.show");
 
         $errorData = urldecode(http_build_query($error->data, '', PHP_EOL));
 
         $page_title = trans('admin/error/general.page.show.title');
         $page_description = trans('admin/error/general.page.show.description', ['error_id' => $error->id]);
 
-        session(['crumbtrail.leaf' => 'error']);
+//        session(['crumbtrail.leaf' => 'error']);
         return view('admin.errors.show', compact('error', 'errorData', 'page_title', 'page_description'));
     }
 

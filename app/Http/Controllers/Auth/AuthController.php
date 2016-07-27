@@ -15,6 +15,9 @@ use App\Repositories\AuditRepository as Audit;
 
 class AuthController extends Controller
 {
+    protected $loginPath = '/auth/login'; // path to the login URL
+    protected $redirectPath = '/dashboard'; // path to the route where you want users to be redirected once logged in
+    protected $redirectTo = '/auth/login'; // path you're sent to once you've reset your password
     /*
     |--------------------------------------------------------------------------
     | Registration & Login Controller

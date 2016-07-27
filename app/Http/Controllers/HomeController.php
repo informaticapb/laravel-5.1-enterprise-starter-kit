@@ -18,8 +18,8 @@ class HomeController extends Controller
 
     public function welcome() {
 
-        $page_title = "Welcome";
-        $page_description = "This is the welcome page";
+        $page_title = "";
+        $page_description = "";
 
         return view('welcome', compact('page_title', 'page_description'));
     }

@@ -16,11 +16,11 @@ class DatabaseSeeder extends Seeder
 
         $this->call('ProductionSeeder');
 
-        if( App::environment() === 'development' )
+/*        if( App::environment() === 'development' )
         {
             $this->call('DevelopmentSeeder');
         }
-
+*/
         Model::reguard();
     }
 }

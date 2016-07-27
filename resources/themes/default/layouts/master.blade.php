@@ -13,6 +13,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <meta name="csrf-token" content="{{ csrf_token() }}" />
     <!-- Bootstrap 3.3.4 -->
     <link href="{{ asset("/bower_components/admin-lte/bootstrap/css/bootstrap.min.css") }}" rel="stylesheet" type="text/css" />
+    <!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">-->
     <!-- Font Awesome Icons 4.4.0 -->
     <link href="{{ asset("/bower_components/admin-lte/font-awesome/css/font-awesome.min.css") }}" rel="stylesheet" type="text/css" />
     <!-- Ionicons 2.0.1 -->
@@ -23,15 +24,34 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Application CSS-->
     <link href="{{ asset(elixir('css/all.css')) }}" rel="stylesheet" type="text/css" />
 
+
     <!-- Head -->
     @include('partials._head')
 
+    <!-- Rapid Styles CSS-->
+    <link media="all" type="text/css" rel="stylesheet" href="{{ asset("/packages/zofe/rapyd/assets/autocomplete/autocomplete.css") }}" />
+    <link media="all" type="text/css" rel="stylesheet" href="{{ asset("/packages/zofe/rapyd/assets/autocomplete/bootstrap-tagsinput.css") }}" />
+    <link media="all" type="text/css" rel="stylesheet" href="{{ asset("/packages/zofe/rapyd/assets/datepicker/datepicker3.css") }} "/>
+    <link media="all" type="text/css" rel="stylesheet" href="{{ asset("/packages/zofe/rapyd/assets/demo/style.css") }}" />
+    <link media="all" type="text/css" rel="stylesheet" href="{{ asset("/packages/zofe/rapyd/assets/rapyd.css") }}" />
+
+    <style>
+      .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td
+      {
+        border-top: 1px solid #000000;
+        border-bottom: 1px solid #000000;
+      }
+      .rpd-dataform, .rpd-datagrid {
+        padding: 5px 0;
+      }      
+    </style>
       <!-- REQUIRED JS SCRIPTS -->
 
       <!-- jQuery 2.1.4 -->
       <script src="{{ asset ("/bower_components/admin-lte/plugins/jQuery/jQuery-2.1.4.min.js") }}"></script>
       <!-- Bootstrap 3.3.2 JS -->
       <script src="{{ asset ("/bower_components/admin-lte/bootstrap/js/bootstrap.min.js") }}" type="text/javascript"></script>
+      <!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">-->
       <!-- AdminLTE App -->
       <script src="{{ asset ("/bower_components/admin-lte/dist/js/app.min.js") }}" type="text/javascript"></script>
 
@@ -52,6 +72,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
       <!-- Optional header section  -->
       @yield('head_extra')
+
+    <!-- Rapid Javascript-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.pjax/1.9.6/jquery.pjax.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/2.2.4/riot+compiler.min.js" type="text/javascript"></script>
+    <script src="{{ asset("/packages/zofe/rapyd/assets/autocomplete/typeahead.bundle.min.js") }}" type="text/javascript"></script>
+    <script src="{{ asset("/packages/zofe/rapyd/assets/template/handlebars.js") }}" type="text/javascript"></script>
+    <script src="{{ asset("/packages/zofe/rapyd/assets/autocomplete/bootstrap-tagsinput.min.js") }}" type="text/javascript"></script>
+    <script src="{{ asset("/packages/zofe/rapyd/assets/datepicker/bootstrap-datepicker.js") }}" type="text/javascript"></script>
 
   </head>
 

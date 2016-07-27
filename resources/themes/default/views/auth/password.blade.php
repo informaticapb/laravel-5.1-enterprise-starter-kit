@@ -1,7 +1,7 @@
 @extends('layouts.dialog')
 
 @section('content')
-    <p class="login-box-msg">Enter your email to reset your password</p>
+    <p class="login-box-msg">Insira seu e-mail para redefinir sua senha</p>
         <form class="form-signin" method="POST" action="{{ route('recover_passwordPost') }}" >
             {!! csrf_field() !!}
 
@@ -16,7 +16,7 @@
             </div>
         </form>
 
-        {!! link_to_route('login', 'Sign in', [], ['class' => "text-center"]) !!}<br>
+        {!! link_to_route('login', 'Entrar', [], ['class' => "text-center"]) !!}<br>
         {!! link_to_route('register', 'Register a new membership', [], ['class' => "text-center"]) !!}
 
 @endsection

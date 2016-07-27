@@ -4,7 +4,7 @@ return [
     'audit-log'           => [
         'category'              => 'Usuários',
         'msg-index'             => 'Acessado lista de usuários.',
-        'msg-show'              => 'Detalhes acessados ??de usuário: :username.',
+        'msg-show'              => 'Detalhes do usuário: :username.',
         'msg-store'             => 'Novo usuário criado: :username.',
         'msg-edit'              => 'Editar propriedades do usuário: :username.',
         'msg-replay-edit'       => 'Editar novamente propriedades do usuário: :username.',
@@ -45,22 +45,23 @@ return [
         'show'              => [
             'title'             => 'Admin | Usuários | Mostrar',
             'description'       => 'Exibindo usuário: :full_name',
-            'section-title'     => 'Detalhes do usuário'
+            'section-title'     => 'Detalhes do usuário',
         ],
         'create'            => [
             'title'            => 'Admin | User | Criar',
             'description'      => 'Criando um novo usuário',
-            'section-title'    => 'Novo usuário'
+            'section-title'    => 'Novo usuário',
         ],
         'edit'              => [
             'title'            => 'Admin | User | Editar',
             'description'      => 'Editando usuário: :full_name',
-            'section-title'    => 'Editar usuário'
+            'section-title'    => 'Editar usuário',
         ],
     ],
 
     'columns'           => [
         'id'                        =>  'ID',
+        'gravatar'                  =>  'Gravatar',
         'username'                  =>  'Nome do usuário',
         'first_name'                =>  'Primeiro nome',
         'last_name'                 =>  'Ultimo name',
@@ -85,14 +86,7 @@ return [
         'create'    =>  'Criar novo usuário',
     ],
 
-    'rnavbar'             => [
-        'security'              => 'Segurança',
-        'admin'                 => 'Administração',
-        'users'                 => 'Usuários',
-        'roles'                 => 'Funções',
-        'permissions'           => 'Permissões',
-        'routes'                => 'Rotas',
-    ],
+
 
 ];
 
