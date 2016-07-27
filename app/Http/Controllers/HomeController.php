@@ -3,8 +3,11 @@
 
 class HomeController extends Controller
 {
-    public function index() {
-
+    /**
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function index()
+    {
         $homeRouteName = 'welcome';
 
         try {
@@ -16,6 +19,9 @@ class HomeController extends Controller
         return \Redirect::route($homeRouteName);
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function welcome() {
 
         $page_title = "";
